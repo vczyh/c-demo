@@ -15,10 +15,9 @@ int main() {
         exit(1);
     }
 
-    ssize_t numRead;
     char buf[BUF_SIZE];
 
-    while ((numRead = read(fd, buf, BUF_SIZE)) > 0) {
+    while (read(fd, buf, BUF_SIZE) > 0) {
         printf("%s", buf);
     }
 }
